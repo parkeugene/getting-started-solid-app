@@ -23,6 +23,7 @@ import {
 } from "@inrupt/solid-client";
 
 import {SCHEMA_INRUPT, RDF, AS} from "@inrupt/vocab-common-rdf";
+import Image from "next/image";
 
 export default function Home() {
     const [idp, setIdp] = useState("");
@@ -207,7 +208,10 @@ export default function Home() {
             <footer className="text-center text-white text-sm mt-4">
                 <p>
                     This is a solid application example of how to create a reading list using NextJS.
-                   <a href="https://github.com/parkeugene/getting-started-solid-app/settings/installations">GitHub</a>
+                </p>
+                <p>
+                    This code is available on
+                    <a href="https://github.com/parkeugene/getting-started-solid-app/"> <Image src="/github-mark-white.png" alt="GitHub icon" width={20} height={20} className="inline"></Image> GitHub</a>
                 </p>
             </footer>
         </div>
