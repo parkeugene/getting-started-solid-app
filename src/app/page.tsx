@@ -77,7 +77,7 @@ export default function Home() {
             // Update the page with the retrieved values.
 
             mypods.forEach((mypod) => {
-                let podOption = document.createElement("option");
+                const podOption = document.createElement("option");
                 podOption.textContent = mypod;
                 podOption.value = mypod;
                 selectorPod.appendChild(podOption);
@@ -94,7 +94,7 @@ export default function Home() {
             // such that applications can follow to find your list.
             const readingListUrl = `${SELECTED_POD}getting-started/readingList/myList`;
 
-            let titles = document.getElementById("titles").value.split("\n");
+            const titles = document.getElementById("titles").value.split("\n");
 
             // Fetch or create a new reading list.
             let myReadingList;
@@ -103,7 +103,7 @@ export default function Home() {
                 // Attempt to retrieve the reading list in case it already exists.
                 myReadingList = await getSolidDataset(readingListUrl, { fetch: fetch });
                 // Clear the list to override the whole list
-                let items = getThingAll(myReadingList);
+                const items = getThingAll(myReadingList);
                 items.forEach((item) => {
                     myReadingList = removeThing(myReadingList, item);
                 });
@@ -141,11 +141,11 @@ export default function Home() {
                 // Refetch the Reading List
                 savedReadingList = await getSolidDataset(readingListUrl, { fetch: fetch });
 
-                let items = getThingAll(savedReadingList);
+                const items = getThingAll(savedReadingList);
 
                 let listcontent = "";
                 for (let i = 0; i < items.length; i++) {
-                    let item = getStringNoLocale(items[i], SCHEMA_INRUPT.name);
+                    const item = getStringNoLocale(items[i], SCHEMA_INRUPT.name);
                     if (item !== null) {
                         listcontent += item + "\n";
                     }
