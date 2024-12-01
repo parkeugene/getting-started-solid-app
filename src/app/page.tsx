@@ -23,6 +23,7 @@ import {
 } from "@inrupt/solid-client";
 
 import {SCHEMA_INRUPT, RDF, AS} from "@inrupt/vocab-common-rdf";
+
 import Image from "next/image";
 
 export default function Home() {
@@ -207,7 +208,7 @@ export default function Home() {
             </div>
             <footer className="text-center text-white text-sm mt-4">
                 <p>
-                    This is a solid application example of how to create a reading list using NextJS.
+                    This is a example of how to create a reading list using Solid.
                 </p>
                 <p>
                     This code is available on
