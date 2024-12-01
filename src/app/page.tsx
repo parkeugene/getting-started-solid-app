@@ -35,9 +35,18 @@ export default function Home() {
         const buttonCreate = document.querySelector("#btnCreate");
         const labelCreateStatus = document.querySelector("#labelCreateStatus");
 
-// buttonRead.setAttribute("disabled", "disabled");
-        buttonLogin.setAttribute("disabled", "disabled");
-        buttonCreate.setAttribute("disabled", "disabled");
+        if (buttonRead) {
+            buttonRead.setAttribute("disabled", "disabled");
+        }
+        if (buttonLogin) {
+            buttonLogin.setAttribute("disabled", "disabled");
+        }
+        if (buttonCreate) {
+            buttonCreate.setAttribute("disabled", "disabled");
+        }
+//      buttonRead.setAttribute("disabled", "disabled");
+//      buttonLogin.setAttribute("disabled", "disabled");
+//      buttonCreate.setAttribute("disabled", "disabled");
 
 // 1a. Start Login Process. Call login() function.
         function loginToSelectedIdP() {
