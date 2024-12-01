@@ -120,8 +120,8 @@ export default function Home() {
     }, []);
 
     return (
-        <div>
-            <div className="container mx-auto p-4">
+        <div className="grid items-center justify-items-center p-8 gap-2 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+            <div className="text-left w-[600px]">
                 <h1 className="text-xl font-bold mb-4">Solid Reading List</h1>
 
                 <section className="">
@@ -204,7 +204,7 @@ export default function Home() {
                     </section>
                 )}
             </div>
-            <footer className="text-center text-gray-600 text-sm mt-4">
+            <footer className="text-center text-white text-sm mt-4">
                 <p>
                     This is a solid application example of how to create a reading list using NextJS.
                    <a href="https://github.com/parkeugene/getting-started-solid-app/settings/installations">GitHub</a>
