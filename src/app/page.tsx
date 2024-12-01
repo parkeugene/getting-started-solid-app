@@ -75,7 +75,7 @@ export default function Home() {
         const readingListUrl = `${pod}getting-started/readingList/myList`;
         const titlesArray = titles.split("\n").filter((t) => t.trim() !== "");
 
-        let myReadingList;
+        let myReadingList = createSolidDataset()
         try {
             myReadingList = await getSolidDataset(readingListUrl, {fetch});
             const items = getThingAll(myReadingList);
