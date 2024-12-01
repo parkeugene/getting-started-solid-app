@@ -83,12 +83,10 @@ export default function Home() {
                 myReadingList = removeThing(myReadingList, item);
             });
         } catch (error: unknown) {
-            if (error.statusCode === 404) {
-                myReadingList = createSolidDataset();
+            if (error instanceof Error) {
+                console.error(error.message); // Now you can safely access error.message
             } else {
-                console.error(error.message);
-                setStatus(`Error: ${error.message}`);
-                return;
+                console.error("An unknown error occurred");
             }
         }
 
